@@ -76,12 +76,13 @@ axios
 
   }
   const submitCity   = (city) =>{
-   
+    console.log(city)
+    
     if (weatherDataList.length == 5 ) {
     setweatherDataList([<h1 style={{color:'red'}}>No se puede agregar más de cinco ubicaciones, por favor elimine alguna.</h1>,...weatherDataList])
     }
 
-    else if (weatherDataList.length  < 6) {
+    else if (weatherDataList.length  < 6 && city) {
       massiveData(city,true)
     }
 
